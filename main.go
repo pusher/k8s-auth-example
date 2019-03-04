@@ -135,9 +135,9 @@ func cmd() *cobra.Command {
 			}
 
 			if rootCAs != "" {
-				client, er := httpClientForRootCAs(rootCAs)
-				if er != nil {
-					return er
+				client, cErr := httpClientForRootCAs(rootCAs)
+				if cErr != nil {
+					return cErr
 				}
 				a.client = client
 			}

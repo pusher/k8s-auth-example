@@ -51,15 +51,15 @@ type app struct {
 }
 
 type claim struct {
-	Iss           string `json:"iss"`
-	Sub           string `json:"sub"`
-	Aud           string `json:"aud"`
-	Exp           int    `json:"exp"`
-	Iat           int    `json:"iat"`
-	AtHash        string `json:"at_hash"`
-	Email         string `json:"email"`
-	EmailVerified bool   `json:"email_verified"`
-	Name          string `json:"name"`
+	Iss           string   `json:"iss"`
+	Sub           string   `json:"sub"`
+	Aud           []string `json:"aud"`
+	Exp           int      `json:"exp"`
+	Iat           int      `json:"iat"`
+	AtHash        string   `json:"at_hash"`
+	Email         string   `json:"email"`
+	EmailVerified bool     `json:"email_verified"`
+	Name          string   `json:"name"`
 }
 
 // return an HTTP client which trusts the provided root CAs.
